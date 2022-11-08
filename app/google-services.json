@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "822658586528",
+    "project_id": "endless-riding",
+    "storage_bucket": "endless-riding.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822658586528:android:d717f913bc4bccf72a76c5",
+        "android_client_info": {
+          "package_name": "com.kitaharaa.endlessriding"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "822658586528-vq6t6v9a539833u84s7pmqnkl09dqlfc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kitaharaa.endlessriding",
+            "certificate_hash": "f28aa3ba988363aaa0390405c3a66cd0c423b2a6"
+          }
+        },
+        {
+          "client_id": "822658586528-flhocomfscl597o9lcmhb34k9lmt0ds0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_fqYecxLNyazuhVamPnqGbA6kudPHJvo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "822658586528-flhocomfscl597o9lcmhb34k9lmt0ds0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
