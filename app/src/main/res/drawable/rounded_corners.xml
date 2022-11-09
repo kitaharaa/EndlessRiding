@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Background for making buttons corners round -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="?colorControlHighlight">
+
+    <!-- default ripple color -->
+    <item>
+        <!-- the background shape when it's not being clicked -->
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/button_rounded_corners" />
+            <solid android:color="@color/brown" />
+        </shape>
+
+    </item>
+
+</ripple>
