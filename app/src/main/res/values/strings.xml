@@ -4,4 +4,6 @@
     <string name="start_button_text">Start Game</string>
     <string name="game_title_text">Endless Riding</string>
     <string name="highest_score_text">High score: </string>
+
+    <string name="score_text">Score: </string>
 </resources>
