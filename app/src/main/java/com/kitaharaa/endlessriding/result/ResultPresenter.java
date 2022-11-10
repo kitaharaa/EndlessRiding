@@ -1,4 +1,4 @@
-package com.kitaharaa.endlessriding.restart;
+package com.kitaharaa.endlessriding.result;
 
 public class ResultPresenter implements ResultContract.Presenter{
     ResultContract.View view;

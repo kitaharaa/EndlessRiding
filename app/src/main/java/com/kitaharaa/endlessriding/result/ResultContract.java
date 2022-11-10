@@ -1,4 +1,4 @@
-package com.kitaharaa.endlessriding.restart;
+package com.kitaharaa.endlessriding.result;
 
 public interface ResultContract {
     interface View {

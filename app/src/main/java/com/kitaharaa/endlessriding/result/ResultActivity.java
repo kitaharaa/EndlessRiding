@@ -1,4 +1,4 @@
-package com.kitaharaa.endlessriding.restart;
+package com.kitaharaa.endlessriding.result;
 
 import android.app.Activity;
 import android.content.Intent;

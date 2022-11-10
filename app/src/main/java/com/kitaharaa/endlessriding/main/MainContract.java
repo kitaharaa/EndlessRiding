@@ -10,6 +10,8 @@ public interface MainContract {
         void fetchData();
         boolean getGamePass();
         String getWebLink();
+        void createDatabaseObject();
+        void setWebLinkValue(String value);
 
     }
 }

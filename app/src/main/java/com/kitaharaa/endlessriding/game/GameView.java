@@ -14,7 +14,7 @@ import android.view.SurfaceView;
 import androidx.annotation.NonNull;
 
 import com.kitaharaa.endlessriding.R;
-import com.kitaharaa.endlessriding.restart.ResultActivity;
+import com.kitaharaa.endlessriding.result.ResultActivity;
 
 public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     private final MainThread thread;
