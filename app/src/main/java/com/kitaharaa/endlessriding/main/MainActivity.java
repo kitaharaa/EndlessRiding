@@ -14,12 +14,17 @@ import com.kitaharaa.endlessriding.game.GameActivity;
 public class MainActivity extends Activity
         implements MainContract.View  {
     private MainContract.Presenter presenter;
-    private int targetFPS = 30;
-    Boolean GAME_PASS = false;
+    Boolean GAME_PASS;
+    String WEB_LINK;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        presenter = new MainPresenter(this);
+        GAME_PASS = presenter.getGamePass();
+        WEB_LINK = presenter.getWebLink();
 
        try {
             Thread.sleep(3000);
@@ -29,15 +34,13 @@ public class MainActivity extends Activity
         SplashScreen.installSplashScreen(this);
 
         if (GAME_PASS) {
-            setContentView(R.layout.activity_main_web_view);
-            WebView webView = findViewById(R.id.webView);
-            webView.loadUrl("https://tinypng.com/");
-        } else {
             setContentView(R.layout.activity_main);
             createButtonListener();
+        } else {
+            setContentView(R.layout.activity_main_web_view);
+            WebView webView = findViewById(R.id.webView);
+            webView.loadUrl(WEB_LINK);
         }
-        presenter = new MainPresenter(this);
-
     }
 
     @Override

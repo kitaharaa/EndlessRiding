@@ -6,6 +6,10 @@ public interface MainContract {
     }
 
     interface Presenter {
+        void createConfigObject();
+        void fetchData();
+        boolean getGamePass();
+        String getWebLink();
 
     }
 }
