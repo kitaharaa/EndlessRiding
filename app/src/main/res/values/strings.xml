@@ -6,4 +6,9 @@
     <string name="highest_score_text">High score: </string>
 
     <string name="score_text">Score: </string>
+
+    <string name="loose_text">You Lost</string>
+    <string name="won_text">You Won</string>
+    <string name="play_again_button_text">Play Again</string>
+    <string name="exit_button_text">Exit</string>
 </resources>

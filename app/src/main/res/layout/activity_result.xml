@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/game_background"
+    tools:context=".restart.ResultActivity">
+
+    <!-- Title text-->
+    <TextView
+        android:id="@+id/result_title"
+        android:text="@string/loose_text"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:fontFamily="@font/awmu"
+        android:textColor="@color/red"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Score Text-->
+    <TextView
+        android:id="@+id/score"
+        android:text="@string/score_text"
+        android:fontFamily="@font/plaguard"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Play Again button-->
+    <Button
+        android:id="@+id/play_again_button"
+        android:layout_width="match_parent"
+        android:text="@string/play_again_button_text"
+        android:fontFamily="@font/awmu"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@color/brown"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/exit_button"
+        android:text="@string/exit_button_text"
+        android:fontFamily="@font/awmu"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:background="@color/brown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

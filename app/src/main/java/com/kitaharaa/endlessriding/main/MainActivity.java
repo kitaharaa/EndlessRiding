@@ -21,11 +21,11 @@ public class MainActivity extends Activity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-       /* try {
+       try {
             Thread.sleep(3000);
         } catch (InterruptedException exception) {
             exception.printStackTrace();
-        }*/
+        }
         SplashScreen.installSplashScreen(this);
 
         if (GAME_PASS) {

@@ -14,7 +14,7 @@ import android.view.SurfaceView;
 import androidx.annotation.NonNull;
 
 import com.kitaharaa.endlessriding.R;
-import com.kitaharaa.endlessriding.restart.RestartActivity;
+import com.kitaharaa.endlessriding.restart.ResultActivity;
 
 public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     private final MainThread thread;
@@ -135,7 +135,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                 exception.printStackTrace();
             }
 
-            activity.startActivity(new Intent(activity, RestartActivity.class).
+            activity.startActivity(new Intent(activity, ResultActivity.class).
                     putExtra("score", countScore()));
             System.exit(0);
         }
