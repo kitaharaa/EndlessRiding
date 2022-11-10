@@ -11,6 +11,7 @@ import android.view.WindowManager;
 import com.kitaharaa.endlessriding.R;
 import com.kitaharaa.endlessriding.main.MainActivity;
 
+/* Splash Screen */
 public class SplashActivity extends Activity implements
         SplashContract.View {
 

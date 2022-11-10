@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import com.kitaharaa.endlessriding.R;
 import com.kitaharaa.endlessriding.game.GameActivity;
+
+/*Activity execute when game is over */
 public class ResultActivity extends Activity implements ResultContract.View {
     private ResultPresenter presenter;
     private int scoreCount;
@@ -39,6 +41,7 @@ public class ResultActivity extends Activity implements ResultContract.View {
         presenter = new ResultPresenter(this);
     }
 
+    /* Set window preferences */
     @Override
     public void setScreenPreferences() {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -48,18 +51,21 @@ public class ResultActivity extends Activity implements ResultContract.View {
         setContentView(R.layout.activity_result);
     }
 
+    /* Set score value */
     @Override
     public void setScoreValue() {
         TextView scoreText = findViewById(R.id.score);
         scoreText.setText(getResources().getString(R.string.score_text) + scoreCount);
     }
 
+    /* Extract data from intent*/
     @Override
     public void getValueFromIntent() {
         Intent intent = getIntent();
         scoreCount = intent.getIntExtra("score", 0);
     }
 
+    /* Set title */
     @Override
     public void setTitleText() {
         TextView resultTitle = findViewById(R.id.result_title);

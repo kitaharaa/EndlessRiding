@@ -1,5 +1,6 @@
 package com.kitaharaa.endlessriding.result;
 
+/* Contract */
 public interface ResultContract {
     interface View {
         void setScreenPreferences();

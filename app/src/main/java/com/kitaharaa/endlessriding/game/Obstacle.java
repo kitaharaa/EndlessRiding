@@ -11,6 +11,7 @@ public class Obstacle {
     int screenWidth, screenHeight;
     int score = 0;
 
+    /* Set parameters*/
     public Obstacle(Bitmap image, int width, int height, int obstacleVelocity) {
         this.image = image;
         this.obstacleVelocity = obstacleVelocity;
@@ -18,10 +19,12 @@ public class Obstacle {
         screenHeight = height;
     }
 
+    /* Draw obstacle  */
     public void draw(Canvas canvas) {
         canvas.drawBitmap(image, x, y, null);
     }
 
+    /* Update obstacle */
     public void update() {
         if (y + image.getHeight() < screenHeight) {
             y += obstacleVelocity;
@@ -32,6 +35,7 @@ public class Obstacle {
         }
     }
 
+    /* Getter methods*/
     public int getScore() {
         return score;
     }
