@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">Endless Riding</string>
+
+    <string name="start_button_text">Start Game</string>
+    <string name="game_title_text">Endless Riding</string>
+    <string name="highest_score_text">High score: </string>
+
+    <string name="score_text">Score: </string>
+
+    <string name="loose_text">You Lost</string>
+    <string name="won_text">You Won</string>
+    <string name="play_again_button_text">Play Again</string>
+    <string name="exit_button_text">Exit</string>
+    <string name="title_activity_splash_screenctivity">SplashScreenctivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>
