@@ -3,6 +3,7 @@ package com.kitaharaa.endlessriding.game;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 
+/* Class that creates an obstacles */
 public class Obstacle {
     Bitmap image;
     int obstacleVelocity;

@@ -5,6 +5,7 @@ import android.view.SurfaceHolder;
 
 import com.kitaharaa.endlessriding.game.GameView;
 
+/* Allow tu run game in different thread */
 public class MainThread extends Thread {
     private final SurfaceHolder surfaceHolder;
     private final GameView gameView;

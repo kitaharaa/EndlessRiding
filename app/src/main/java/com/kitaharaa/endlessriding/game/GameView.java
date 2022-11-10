@@ -16,6 +16,7 @@ import androidx.annotation.NonNull;
 import com.kitaharaa.endlessriding.R;
 import com.kitaharaa.endlessriding.result.ResultActivity;
 
+/* There we can draw and move elements */
 public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     private final MainThread thread;
     private final Context activity;
@@ -27,6 +28,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     private boolean isGameOver = false;
     private Obstacle firstObstacle, secondObstacle, thirdObstacle;
 
+    /* Constructor */
     public GameView(GameActivity activity) {
         super(activity);
         this.activity = activity;
@@ -42,6 +44,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         paint.setColor(Color.WHITE);
     }
 
+    /* When class creates */
     @Override
     public void surfaceCreated(@NonNull SurfaceHolder surfaceHolder) {
         getHolder().addCallback(this);
@@ -53,16 +56,19 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         thread.start();
     }
 
+    /* When class changes*/
     @Override
     public void surfaceChanged(@NonNull SurfaceHolder surfaceHolder, int i, int i1, int i2) {
         update();
     }
 
+    /*When destroy */
     @Override
     public void surfaceDestroyed(@NonNull SurfaceHolder surfaceHolder) {
         thread.setRunning(false);
     }
 
+    /* Creating of objects*/
     public void createObjects() {
         car = new Car(BitmapFactory.decodeResource(getResources(), R.drawable.car));
         background = new Background((BitmapFactory.decodeResource(getResources(), R.drawable.game_background)),
@@ -75,6 +81,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                 screenWidth, screenHeight, 20);
     }
 
+    /* When update */
     public void update() {
         car.update();
         firstObstacle.update();
@@ -84,6 +91,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         checkIfContinueGame();
     }
 
+    /* Check is gae allowed to continue */
     private void checkIfContinueGame() {
         if ((car.getX() - firstObstacle.getX() > 0 && car.getX() - firstObstacle.getX() < firstObstacle.getImageWidth()
                 && car.getY() - firstObstacle.getY() < firstObstacle.getImageHeight()) ||
@@ -105,12 +113,14 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         }
     }
 
+    /* Count elements */
     public int countScore() {
         return firstObstacle.getScore()
                 + secondObstacle.getScore()
                 + thirdObstacle.getScore();
     }
 
+    /* Draw elements */
     @Override
     public void draw(Canvas canvas) {
         super.draw(canvas);
@@ -124,6 +134,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         checkIsGameOver(canvas);
     }
 
+    /*Check is game over */
     public void checkIsGameOver(Canvas canvas) {
         if (countScore() > 40 || isGameOver) {
             canvas.drawText("Score: " + countScore(), 100, 100, paint);
@@ -142,6 +153,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         canvas.drawText(getResources().getString(R.string.score_text) + countScore(), 100, 100, paint);
     }
 
+    /* When we touch screen action performed */
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         car.setX((int) event.getX());

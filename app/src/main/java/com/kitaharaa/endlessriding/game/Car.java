@@ -4,6 +4,7 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 
+/* Set car which we will use to drive */
 public class Car {
     private final Bitmap image;
     public int x, y;
@@ -23,6 +24,7 @@ public class Car {
         y = screenHeight  - image.getHeight();
     }
 
+    /* Draw element*/
     public void draw(Canvas canvas) {
         canvas.drawBitmap(image, x, y, null);
     }
@@ -31,6 +33,7 @@ public class Car {
 
     }
 
+    /* Getters and Setters method */
     public void setX(int x) {
         this.x = x - imageWidth/2;
     }
@@ -38,7 +41,6 @@ public class Car {
     public int getX() {
         return x;
     }
-
 
     public int getY() {
         return y;
