@@ -1,5 +1,6 @@
 package com.kitaharaa.endlessriding.main;
 
+/* Contract */
 public interface MainContract {
     interface View {
         void createButtonListener();
