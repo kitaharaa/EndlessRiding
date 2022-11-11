@@ -27,6 +27,9 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     private Background background;
     private boolean isGameOver = false;
     private Obstacle firstObstacle, secondObstacle, thirdObstacle;
+    private final int firstObstacleVelocity = 25;
+    private final int secondObstacleVelocity = 20;
+    private final int thirdObstacleVelocity = 15;
 
     /* Constructor */
     public GameView(GameActivity activity) {
@@ -74,11 +77,11 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         background = new Background((BitmapFactory.decodeResource(getResources(), R.drawable.game_background)),
                 screenWidth);
         firstObstacle = new Obstacle((BitmapFactory.decodeResource(getResources(), R.drawable.obstacle)),
-                screenWidth, screenHeight, 30);
+                screenWidth, screenHeight, firstObstacleVelocity);
         secondObstacle = new Obstacle((BitmapFactory.decodeResource(getResources(), R.drawable.obstacle)),
-                screenWidth, screenHeight, 50);
+                screenWidth, screenHeight, secondObstacleVelocity);
         thirdObstacle = new Obstacle((BitmapFactory.decodeResource(getResources(), R.drawable.obstacle)),
-                screenWidth, screenHeight, 20);
+                screenWidth, screenHeight, thirdObstacleVelocity);
     }
 
     /* When update */
